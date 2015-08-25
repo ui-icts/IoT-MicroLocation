@@ -23,6 +23,19 @@ public class BeaconController extends HttpServlet
 		super();
 	}
 	
+	
+
+	protected void doGet (HttpServletRequest request, 
+			HttpServletResponse response) throws ServletException, IOException
+	{
+		PrintWriter out = response.getWriter();
+		out.print("here");
+		out.flush();
+		out.close();
+		
+	}
+	
+	
 	protected void doPost (HttpServletRequest request, 
 			HttpServletResponse response) throws ServletException, IOException
 	{	

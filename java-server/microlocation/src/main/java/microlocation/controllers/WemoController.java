@@ -1,14 +1,12 @@
 package microlocation.controllers;
 
 
-import java.io.IOException;
-
-import sun.tools.jar.CommandLine;
-
 import java.io.BufferedReader;
 import java.io.IOException;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
@@ -25,6 +23,17 @@ public class WemoController extends HttpServlet
 	public WemoController()
 	{
 		super();
+	}
+	
+	
+	protected void doGet (HttpServletRequest request, 
+			HttpServletResponse response) throws ServletException, IOException
+	{
+		PrintWriter out = response.getWriter();
+		out.print("here");
+		out.flush();
+		out.close();
+		
 	}
 	
 	Boolean turnOn;
